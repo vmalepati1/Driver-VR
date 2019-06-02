@@ -81,16 +81,16 @@
 
       function animate() {
         if (context) {
-          var piImage = new Image();
+          var cameraImage = new Image();
 
-          piImage.onload = function() {
+          cameraImage.onload = function() {
             console.log('Drawing image');
-            context.drawImage(piImage, 0, 0, canvas.width, canvas.height);
+            context.drawImage(cameraImage, 0, 0, canvas.width, canvas.height);
 
             texture.needsUpdate = true;
           }
 
-          piImage.src = "http://10.29.74.11:5801";
+          cameraImage.src = "http://10.29.74.11:5801";
         }
 
         requestAnimationFrame(animate);
